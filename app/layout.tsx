@@ -19,9 +19,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="cupcake">
-    <Header />
-      <div className={inter.className}>{children}</div>
-    <Footer />
+
+      <body className={inter.className}>
+      <header>
+        <Header />
+      </header>
+        <main>
+          {children}
+        </main>
+      <footer>
+        <Footer />
+      </footer>
+      </body>
+
     </html>
   )
 }
